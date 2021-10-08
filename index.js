@@ -93,3 +93,6 @@ let port = process.env.PORT || 3001;
 http.listen(port, function(){
   console.log('listening in http://localhost:' + port);
 });
+app.get('/', (req, res) => {
+  res.send('Hello World!' + port)
+})
